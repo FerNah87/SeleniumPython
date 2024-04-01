@@ -15,4 +15,3 @@ print("1) Si A es menor que B y A es menor que C " + str(a<b and a<c))
 
 ##Operacion de comparacion funcion O (or)
 print("2) Si A es menor que B y A es menor que C " + str(a<b or a<c))
-

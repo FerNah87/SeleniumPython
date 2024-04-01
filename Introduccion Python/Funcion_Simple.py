@@ -38,6 +38,3 @@ def sumar(*args):
     print("El resultado es: " + str(resultado))
 
 sumar(5,9)
-
-
-

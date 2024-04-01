@@ -6,25 +6,26 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
-
-#driver = webdriver.Chrome(executable_path="C:\SeleniumDrivers\chromedriver.exe")
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 
-driver = webdriver.Firefox(executable_path="C:\SeleniumDrivers\geckodriver.exe")
+#driver = webdriver.Chrome(executable_path="C:\SeleniumDrivers\chromedriver.exe")
+#driver = webdriver.Firefox(executable_path="C:\SeleniumDrivers\geckodriver.exe")
+driver = webdriver.Chrome()
+#driver = webdriver.Firefox()
 t=2
 
 driver.get("https://demo.seleniumeasy.com/input-form-demo.html")
 driver.maximize_window()
 time.sleep(t)
 
-driver.find_element_by_xpath("//input[contains(@name,'first_name')]").send_keys("Fer" + Keys.TAB + "Zal" + Keys.TAB + "cualq@cualq.com")
-driver.find_element_by_xpath("//input[contains(@name,'phone')]").send_keys("1234567890" + Keys.TAB + "Fake Street" + Keys.TAB + "Fake City")
-estado=Select(driver.find_element_by_xpath("//select[contains(@name,'state')]"))
+driver.find_element(By.XPATH, "//input[contains(@name,'first_name')]").send_keys("Fer" + Keys.TAB + "Zal" + Keys.TAB + "cualq@cualq.com")
+driver.find_element(By.XPATH, "//input[contains(@name,'phone')]").send_keys("1234567890" + Keys.TAB + "Fake Street" + Keys.TAB + "Fake City")
+estado=Select(driver.find_element(By.XPATH, "//select[contains(@name,'state')]"))
 estado.select_by_index(5)
-driver.find_element_by_xpath("//input[contains(@name,'zip')]").send_keys("14650" + Keys.TAB + "www.google.com.ar")
-driver.find_element_by_xpath("//input[contains(@value,'no')]").click()
-driver.find_element_by_xpath("//textarea[contains(@class,'form-control')]").send_keys("Prueba del Desafio" + Keys.TAB + Keys.ENTER)
+driver.find_element(By.XPATH, "//input[contains(@name,'zip')]").send_keys("14650" + Keys.TAB + "www.google.com.ar")
+driver.find_element(By.XPATH, "//input[contains(@value,'no')]").click()
+driver.find_element(By.XPATH, "//textarea[contains(@class,'form-control')]").send_keys("Prueba del Desafio" + Keys.TAB + Keys.ENTER)
 
 '''
 Dos formas mas de tirar el SEND

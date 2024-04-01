@@ -1,0 +1,13 @@
+Escribiendo en el campo txtUsername el texto -> Admin 
+Escribiendo en el campo txtPassword el texto -> admin123 
+dando click en btnLogin -> btnLogin 
+Entrando al sistema
+Entrando el sistema dos
+dando click en //b[contains(.,'Admin')] -> //b[contains(.,'Admin')] 
+dando click en //a[contains(@id,'menu_admin_UserManagement')] -> //a[contains(@id,'menu_admin_UserManagement')] 
+Escribiendo en el campo //input[contains(@id,'searchSystemUser_userName')] el texto -> ananya Dash 
+dando click en //input[contains(@id,'searchBtn')] -> //input[contains(@id,'searchBtn')] 
+dando click en //input[contains(@id,'btnAdd')] -> //input[contains(@id,'btnAdd')] 
+El campo Seleccionado es 0 
+Salida del login uno
+Salida del login uno

@@ -6,12 +6,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
-
-#driver = webdriver.Chrome(executable_path="C:\SeleniumDrivers\chromedriver.exe")
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 
-driver = webdriver.Firefox(executable_path="C:\SeleniumDrivers\geckodriver.exe")
+#driver = webdriver.Chrome(executable_path="C:\SeleniumDrivers\chromedriver.exe")
+#driver = webdriver.Firefox(executable_path="C:\SeleniumDrivers\geckodriver.exe")
+driver = webdriver.Chrome()
+#driver = webdriver.Firefox()
 t=2
 
 driver.get("https://demo.seleniumeasy.com/input-form-demo.html")
@@ -28,13 +29,13 @@ print("El numero de Links de la pagina es: ", len(links))
 for num in links:
     print(num.text)
 
-driver.find_element_by_link_text("Date pickers").click()
+driver.find_element(By.LINK_TEXT, "Date pickers").click()
 time.sleep(t)
-driver.find_element_by_link_text("Bootstrap Date Picker").click()
+driver.find_element(By.LINK_TEXT, "Bootstrap Date Picker").click()
 time.sleep(t)
-driver.find_element_by_link_text("Date pickers").click()
+driver.find_element(By.LINK_TEXT, "Date pickers").click()
 time.sleep(t)
-driver.find_element_by_link_text("JQuery Date Picker").click()
+driver.find_element(By.LINK_TEXT, "JQuery Date Picker").click()
 time.sleep(t)
 
 time.sleep(t)

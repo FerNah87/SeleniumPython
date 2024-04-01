@@ -5,7 +5,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
 #driver = webdriver.Chrome(executable_path="C:\SeleniumDrivers\chromedriver.exe")
-driver = webdriver.Firefox(executable_path="C:\SeleniumDrivers\geckodriver.exe")
+#driver = webdriver.Firefox(executable_path="C:\SeleniumDrivers\geckodriver.exe")
+driver = webdriver.Chrome()
+#driver = webdriver.Firefox()
 
 driver.get("https://demoqa.com/text-box")
 driver.maximize_window()

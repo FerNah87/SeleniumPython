@@ -22,5 +22,3 @@ name = "Ferchu"
 lastn = "Snake"
 age = 35
 print("Mi nombre es {} mi apellido es {} y mi edad es {} ".format(name, lastn, age))
-
-

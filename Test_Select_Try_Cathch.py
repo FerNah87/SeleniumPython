@@ -6,12 +6,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
-
-#driver = webdriver.Chrome(executable_path="C:\SeleniumDrivers\chromedriver.exe")
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 
-driver = webdriver.Firefox(executable_path="C:\SeleniumDrivers\geckodriver.exe")
+#driver = webdriver.Chrome(executable_path="C:\SeleniumDrivers\chromedriver.exe")
+#driver = webdriver.Firefox(executable_path="C:\SeleniumDrivers\geckodriver.exe")
+driver = webdriver.Chrome()
+#driver = webdriver.Firefox()
 
 driver.get("https://demo.seleniumeasy.com/basic-select-dropdown-demo.html")
 driver.maximize_window()
@@ -20,7 +21,7 @@ t=2
 
 #el try catch se basa en que si eso no funciona tienen que continuar
 try:
-    select_day=WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//select[contains(@id,'select-demo1')]")))
+    select_day=WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//select[contains(@id,'select-demo')]")))
     #Opciones para probar el dropdown
     select_day=Select(select_day)
     time.sleep(t)
@@ -37,7 +38,7 @@ except TimeoutException as ex:
 driver.execute_script("window.scrollTo(0,300)")
 time.sleep(t)
 
-ciudad=Select(driver.find_element_by_id("multi-select"))
+ciudad=Select(driver.find_element(By.ID, "multi-select"))
 time.sleep(t)
 ciudad.select_by_index(1)
 time.sleep(t)
@@ -50,8 +51,7 @@ time.sleep(t)
 ciudad.select_by_index(5)
 time.sleep(t)
 
-driver.find_element_by_xpath("//*[@id='printAll']").click()
-
+driver.find_element(By.XPATH, "//*[@id='printAll']").click()
 
 time.sleep(t)
 driver.close()

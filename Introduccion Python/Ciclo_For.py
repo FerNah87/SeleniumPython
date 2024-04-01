@@ -11,4 +11,3 @@ for col in colores:
 nombre_completo = "Fer Nah Zal"
 for nom in nombre_completo:
     print(nom)
-
