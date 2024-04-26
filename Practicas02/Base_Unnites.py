@@ -13,26 +13,21 @@ from selenium.common.exceptions import TimeoutException
 class base_test(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path="C:\Drivers\chromedriver.exe")
+        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Firefox
+        # self.driver = webdriver.Chrome(executable_path="C:\Drivers\chromedriver.exe") esto es la forma vieja
         # driver=webdriver.Firefox(executable_path="C:\Drivers\geckodriver.exe")
         t = 2
 
     def test1(self):
         driver = self.driver
-        driver.get("")
+        driver.get("") #al correrlo asi tira error, se tiene que insertar la web
         driver.maximize_window()
         time.sleep(2)
-
-
+        
     def tearDown(self):
         driver = self.driver
         driver.close()
 
 if __name__ == '__main__':
     unittest.main()
-
-
-
-
-
-

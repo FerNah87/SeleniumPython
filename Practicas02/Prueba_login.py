@@ -13,8 +13,8 @@ from selenium.common.exceptions import TimeoutException
 class PruebaLogin(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path="C:\Drivers\chromedriver.exe")
-        # driver=webdriver.Firefox(executable_path="C:\Drivers\geckodriver.exe")
+        self.driver = webdriver.Chrome()
+        #self.driver = webdriver.Firefox()
         t = 2
 
     def test_login1(self):
@@ -126,9 +126,3 @@ class PruebaLogin(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-
-
-
-
-
