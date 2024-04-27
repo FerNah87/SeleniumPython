@@ -9,7 +9,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import TimeoutException
 
-
 class base_test(unittest.TestCase):
 
     def setUp(self):
@@ -31,3 +30,10 @@ class base_test(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+    
+# Unittest: nos da la funcionalidad de crear pruebas mas eficientes, mas ordenada, se crea la carpeta y archivo (se importa las libreriras correspondientes), 
+# 	se crea la plantilla con una CLASE (class base_Test)
+# 	Se crean 2 funciones clases 
+# 		de apertura - setup(self) *con su argumento
+# 		de clausura - tearDown(self) *con su argumento
+# 	Se crea entre la apertura y clausura la funcion para testear (test1)
